@@ -4,31 +4,23 @@ using UnityEngine;
 
 public class CollisionResponse : MonoBehaviour
 {
+    public GameObject block;
     public GameObject player;
     [SerializeField] Transform spawnPoint;
 
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.gameObject == player)
+        if (collision.gameObject.CompareTag("Block"))
         {
-            Debug.Log("collided");
-            //player.GetComponent<Rigidbody>().AddForce(100, 0, 0);
-            //player.GetComponent<Rigidbody>().AddForce(Vector3.left * 1000.0f);
-            //player.GetComponent<Transform>().Position(spawnPoint.position);
-            //player.GetComponent<Transform>().Translate(Vector3.forward * Time.deltaTime);
-            player.transform.position = spawnPoint.position;
+            //this.transform.position = spawnPoint.position;
+            HitPlayer();
         }
+    }
+
+    void HitPlayer()
+    {
+        Debug.Log("hit!");
+        //this.GetComponent<Rigidbody>().AddForce(0, 0, 1000);
+        player.transform.position = spawnPoint.position;
     }
 }
