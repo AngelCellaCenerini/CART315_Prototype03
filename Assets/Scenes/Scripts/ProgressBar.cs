@@ -10,6 +10,8 @@ public class ProgressBar : MonoBehaviour
     private Slider slider;
     public float fillSpeed = 0.05f;
     private float targetProgress = 0;
+    public GameObject FinalScene;
+    public GameObject Spawining;
 
     public Type bS;
 
@@ -32,6 +34,13 @@ public class ProgressBar : MonoBehaviour
                 {
                     slider.value += fillSpeed * Time.deltaTime;
                 }
+            }
+            else
+            {
+                // Debug.Log("complete");
+                // Activate "Final Fan" and Golden Lighting & Deactivate Obstacles
+                FinalScene.SetActive(true);
+                Spawining.SetActive(false);
             }
 
     }

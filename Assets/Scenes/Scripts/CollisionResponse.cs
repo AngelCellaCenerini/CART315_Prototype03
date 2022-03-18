@@ -19,7 +19,7 @@ public class CollisionResponse : MonoBehaviour
 
     void HitPlayer()
     {
-        Debug.Log("hit!");
+        //Debug.Log("hit!");
         //this.GetComponent<Rigidbody>().AddForce(0, 0, 1000);
         player.transform.position = spawnPoint.position;
     }
