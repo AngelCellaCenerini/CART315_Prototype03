@@ -9792,7 +9792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   writersBlockPrefab: {fileID: 6622187156775348242, guid: 02f2e6ac21d88d64598a0a5859c109d4, type: 3}
-  respawnTime: 2
+  respawnTime: 3
   minX: -3
   maxX: 3
   minY: 13
@@ -17998,7 +17998,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5393215578589016642, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 947849346}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1671707665
+--- !u!114 &1671707662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18013,6 +18013,7 @@ MonoBehaviour:
   block: {fileID: 6622187156775348242, guid: 02f2e6ac21d88d64598a0a5859c109d4, type: 3}
   player: {fileID: 1906311847}
   spawnPoint: {fileID: 1080309646}
+  teleported: 0
 --- !u!1 &1680977632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9289618ee5b03c544926774e88428833, type: 3}
@@ -25864,7 +25865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3510bbdb6271ab41ba9757f632151a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillSpeed: 0.05
+  fillSpeed: 0.1
   FinalScene: {fileID: 1058319339}
   Spawining: {fileID: 1014247864}
   bS: {fileID: 1249250611}

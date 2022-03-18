@@ -6,7 +6,9 @@ public class CollisionResponse : MonoBehaviour
 {
     public GameObject block;
     public GameObject player;
-    [SerializeField] Transform spawnPoint;
+    //[SerializeField] Transform spawnPoint;
+    public Transform spawnPoint;
+    public bool teleported = false;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -19,8 +21,9 @@ public class CollisionResponse : MonoBehaviour
 
     void HitPlayer()
     {
-        //Debug.Log("hit!");
+        Debug.Log("hittttt");
         //this.GetComponent<Rigidbody>().AddForce(0, 0, 1000);
         player.transform.position = spawnPoint.position;
+        Debug.Log(transform.position);
     }
 }
